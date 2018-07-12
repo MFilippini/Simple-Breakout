@@ -15,6 +15,7 @@
 		49C13E4520F79FEA00EECD90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C13E4320F79FEA00EECD90 /* Main.storyboard */; };
 		49C13E4720F79FEB00EECD90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C13E4620F79FEB00EECD90 /* Assets.xcassets */; };
 		49C13E4A20F79FEB00EECD90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C13E4820F79FEB00EECD90 /* LaunchScreen.storyboard */; };
+		49C13E5220F7DDE500EECD90 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C13E5120F7DDE500EECD90 /* StartScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		49C13E4620F79FEB00EECD90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49C13E4920F79FEB00EECD90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49C13E4B20F79FEB00EECD90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49C13E5120F7DDE500EECD90 /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				49C13E3920F79FEA00EECD90 /* AppDelegate.swift */,
 				49C13E3B20F79FEA00EECD90 /* GameScene.sks */,
 				49C13E3D20F79FEA00EECD90 /* Actions.sks */,
+				49C13E5120F7DDE500EECD90 /* StartScreen.swift */,
 				49C13E3F20F79FEA00EECD90 /* GameScene.swift */,
 				49C13E4120F79FEA00EECD90 /* GameViewController.swift */,
 				49C13E4320F79FEA00EECD90 /* Main.storyboard */,
@@ -148,6 +151,7 @@
 			files = (
 				49C13E4020F79FEA00EECD90 /* GameScene.swift in Sources */,
 				49C13E4220F79FEA00EECD90 /* GameViewController.swift in Sources */,
+				49C13E5220F7DDE500EECD90 /* StartScreen.swift in Sources */,
 				49C13E3A20F79FEA00EECD90 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,17 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OYN-Lu-42u">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Start Screen-->
+        <scene sceneID="Jam-mw-Mp2">
+            <objects>
+                <viewController id="OYN-Lu-42u" customClass="StartScreen" customModule="Simple_Breakout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jb4-R9-XvA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="Khj-p4-M1l">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakout!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2c-8L-90P">
+                                <rect key="frame" x="95" y="197" width="185" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="V0h-1l-vaG"/>
+                                    <constraint firstAttribute="height" constant="80" id="pmY-Nr-z3c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSa-Hf-ky9">
+                                <rect key="frame" x="126" y="578" width="123" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="lox-dm-dRE"/>
+                                    <constraint firstAttribute="width" constant="123" id="wVL-zr-EZC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="36"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="GR4-fL-hB8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Khj-p4-M1l" firstAttribute="leading" secondItem="Jb4-R9-XvA" secondAttribute="leading" id="QUY-0e-Pux"/>
+                            <constraint firstItem="qbt-ez-SFh" firstAttribute="trailing" secondItem="Khj-p4-M1l" secondAttribute="trailing" id="Rsn-9J-pBY"/>
+                            <constraint firstItem="qbt-ez-SFh" firstAttribute="bottom" secondItem="qSa-Hf-ky9" secondAttribute="bottom" constant="130" id="YQJ-s1-fSl"/>
+                            <constraint firstItem="a2c-8L-90P" firstAttribute="top" secondItem="qbt-ez-SFh" secondAttribute="top" constant="153" id="iPH-ZE-dHN"/>
+                            <constraint firstItem="Khj-p4-M1l" firstAttribute="bottom" secondItem="qbt-ez-SFh" secondAttribute="bottom" constant="34" id="iT8-3u-flz"/>
+                            <constraint firstItem="Khj-p4-M1l" firstAttribute="top" secondItem="Jb4-R9-XvA" secondAttribute="top" id="jGm-J2-QhN"/>
+                            <constraint firstItem="qSa-Hf-ky9" firstAttribute="centerX" secondItem="Jb4-R9-XvA" secondAttribute="centerX" id="jRC-0E-4zO"/>
+                            <constraint firstItem="a2c-8L-90P" firstAttribute="centerX" secondItem="Jb4-R9-XvA" secondAttribute="centerX" id="lt7-MR-2dE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qbt-ez-SFh"/>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="qSa-Hf-ky9" id="Xyk-cU-eqi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hmk-0O-Pzt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-868" y="-50"/>
+        </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Simple_Breakout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
@@ -19,6 +81,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="406" y="-50"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stars" width="589" height="1024"/>
+    </resources>
 </document>
