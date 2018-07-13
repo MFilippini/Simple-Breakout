@@ -31,7 +31,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         makeLoseZone()
         makeTopDeflectors()
         ball.physicsBody?.isDynamic = true
-        ball.physicsBody?.applyImpulse(CGVector(dx: 7, dy: -3))
+        ball.physicsBody?.applyImpulse(CGVector(dx: -4, dy: -6))
     }
     
     func createBackground() {
@@ -121,10 +121,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func createLabel() {
         label.fontSize = 27
-        label.text = "Lives: \(lives)"
         label.numberOfLines = 2
         label.horizontalAlignmentMode = .center
         label.verticalAlignmentMode = .center
+        label.text = "Lives: \(lives)"
         addChild(label)
     }
     
@@ -171,7 +171,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             loseZone.physicsBody?.isDynamic = false
             addChild(ball)
             ball.physicsBody?.isDynamic = true
-            ball.physicsBody?.applyImpulse(CGVector(dx: 8, dy: -4))
+            ball.physicsBody?.applyImpulse(CGVector(dx: -4, dy: -6))
         }
     }
     
@@ -228,7 +228,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         makeTopDeflectors()
         createLabel()
         ball.physicsBody?.isDynamic = true
-        ball.physicsBody?.applyImpulse(CGVector(dx: 7, dy: -3))
+        ball.physicsBody?.applyImpulse(CGVector(dx: -4, dy: -6))
     }
 
     
